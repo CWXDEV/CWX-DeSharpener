@@ -1,15 +1,12 @@
-﻿using Aki.Common.Utils;
-using BepInEx;
+﻿using BepInEx;
 
 namespace DeSharpener
 {
     [BepInPlugin("com.CWX.DeSharpener", "CWX-DeSharpener", "2.0.0")]
-    public class Program : BaseUnityPlugin
+    public class Plugin : BaseUnityPlugin
     {
-        private void Main()
+        private void Awake()
         {
-            Logger.LogMessage("Loading: CWX DESHARPENER");
-
             new DeSharpener().Enable();
         }
     }
